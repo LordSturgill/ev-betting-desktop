@@ -1,0 +1,44 @@
+
+{
+  "name": "positive-ev-bets-desktop",
+  "version": "1.0.0",
+  "description": "Desktop version of the EV Betting Tool",
+  "main": "electron.js",
+  "scripts": {
+    "desktop": "electron .",
+    "build:win": "electron-builder --win",
+    "build:mac": "electron-builder --mac"
+  },
+  "devDependencies": {
+    "electron": "^28.1.3",
+    "electron-builder": "^24.8.0"
+  },
+  "build": {
+    "appId": "com.evbet.desktop",
+    "productName": "EV Betting Tool",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "**/*",
+      "!node_modules/**/*",
+      "!dist/**/*"
+    ],
+    "extraResources": [
+      {
+        "from": "backend/",
+        "to": "backend"
+      },
+      {
+        "from": "frontend/build/",
+        "to": "frontend/build"
+      }
+    ],
+    "win": {
+      "target": "nsis"
+    },
+    "mac": {
+      "target": "dmg"
+    }
+  }
+}
