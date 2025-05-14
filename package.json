@@ -2,6 +2,7 @@
 {
   "name": "positive-ev-bets-desktop",
   "version": "1.0.0",
+  "author": "Lord Sturgill",
   "description": "Desktop version of the EV Betting Tool",
   "main": "electron.js",
   "scripts": {
